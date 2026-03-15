@@ -5,20 +5,22 @@ import (
 	"os"
 )
 
+func reader() {
+	file, err := os.Open("data.txt")
+	if err != nil {
+		panic(err)
+	}
+	defer file.Close()
 
-func reader()  {
-    file, err := os.Create("data.txt")
-    if err != nil {
-        panic(err)
-    }
-    defer file.Close()
+	buf := make([]byte, 10)
 
-    data := []byte("hello")
+	n, err := file.Read(buf)
+	if err != nil {
+		panic(err)
+	}
 
-    _, err = file.Write(data)
-    if err != nil {
-        panic(err)
-    }
-	//1. Read the commands
-	//2. Give insturtion to the writer
+	fmt.Println(string(buf[:n]))
+
+	//1. Answer the user
+	//2.Write the answers to the file
 }

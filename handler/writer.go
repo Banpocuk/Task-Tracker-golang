@@ -1,25 +1,24 @@
 package handler
 
 import (
-    "fmt"
-    "os"
+	"fmt"
+	"os"
 )
 
-func writer()  {
-    file, err := os.Open("data.txt")
-    if err != nil {
-        panic(err)
-    }
-    defer file.Close()
+func write(input_write string) {
+	file, err := os.Create("data.txt")
+	if err != nil {
+		panic(err)
+	}
+	defer file.Close()
 
-    buf := make([]byte, 10)
+	data := []byte(input_write)
 
-    n, err := file.Read(buf)
-    if err != nil {
-        panic(err)
-    }
-
-    fmt.Println(string(buf[:n]))
-	//1. Answer the user
-	//2.Write the answers to the file
+	_, err = file.Write(data)
+	if err != nil {
+		panic(err)
+	}
+	//1. Read the commands
+	//2. Write here
+	fmt.Println("Writing done")
 }
