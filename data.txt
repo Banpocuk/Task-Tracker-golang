@@ -1,1 +1,4 @@
-another hellow
+1|"Buy costumes"|todo
+2|"Go to school"|in-progress
+3|"Write golang pet-project"|done
+4|"Buy femboy"|done
