@@ -10,20 +10,18 @@ import (
 var read *bufio.Reader = bufio.NewReader(os.Stdin)
 
 func Commands_holder(input string) {
-	switch input {
+	switch [0]input {
 	case "help":
 		fmt.Println("1.exit \n2.write \n3.read \n4.delete")
 	case "exit":
 		fmt.Println("exiting...")
 		return
 	case "write":
-		input := input_holder("write")
-		writer(input)
+		writer(input[1])
 	case "read":
 		input := input_holder("read")
 		reader(input)
 	case "delete":
-		input := input_holder("delete")
 		// delete func
 	default:
 		fmt.Println("Invalid command")
