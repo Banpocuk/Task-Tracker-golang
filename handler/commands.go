@@ -17,7 +17,7 @@ func Commands_holder(input string) {
 		fmt.Println("exiting...")
 		os.Exit(0)
 	case "write":
-		input := input_holder("write?")
+		input := input_holder("write? (task name in quotes)")
 		status := input_holder("status? todo/in-progress/done")
 		writer(input, status)
 	case "list":
@@ -35,7 +35,7 @@ func Commands_holder(input string) {
 		status := input_holder("update by status?")
 		update_by_status(status)
 	case "delete":
-		input := input_holder("delete?")
+		input := input_holder("delete? (write only id)")
 		delete_task(input)
 	default:
 		fmt.Println("Invalid command 👾")

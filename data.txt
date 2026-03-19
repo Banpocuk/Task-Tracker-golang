@@ -1,4 +1,5 @@
-1|"Buy costumes"|todo
-2|"Go to school"|in-progress
-3|"Write golang pet-project"|done
-4|"Buy femboy"|done
+1|"Buy femboy|todo
+2|"Dont sleep"|in-progress
+3|"Finish todo project"|todo
+4|"Write deleter func"|done
+5|"Update id, like when 1 id is clear, reupdate all" id|in-progress
